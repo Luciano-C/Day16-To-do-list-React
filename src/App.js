@@ -4,7 +4,7 @@ import {useState} from "react";
 
 function App() {
   
-  const [item, setItem] = useState([]);
+  const [itemList, setItem] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [listItemsHTML, setListItemsHTML] = useState([]);
  
@@ -12,8 +12,8 @@ function App() {
   
   
   const addItem = () => {
-    item.push(inputValue);
-    let itemsToAdd = item.map((x,i) => <li key={i}>{x}</li>);
+    itemList.push(inputValue);
+    let itemsToAdd = itemList.map((x,i) => <li key={i}>{x}</li>);
     setListItemsHTML(itemsToAdd);
   }
   
