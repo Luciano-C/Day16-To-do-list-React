@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
 
 function App() {
+  
+  const [item, setItem] = useState("");
+  let listItemsHTML = [<li>tarea 1</li>, <li>tarea 2</li>];
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="globalContainer">
+      <h1>To do</h1>
+      <div className = "paperContainer">
+        <input id="inputToDo" placeholder="What needs to be done?"/>
+        <div id="paper-1"><ul>{listItemsHTML}</ul></div>
+        <div id="paper-2"></div>
+        <div id="paper-3"></div>
+      </div>
+
     </div>
+
   );
 }
 
