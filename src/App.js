@@ -4,15 +4,26 @@ import {useState} from "react";
 
 function App() {
   
-  const [item, setItem] = useState("");
-  let listItemsHTML = [<li>tarea 1</li>, <li>tarea 2</li>];
+  const [item, setItem] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+  const [listItemsHTML, setListItemsHTML] = useState([]);
+ 
   
+  
+  
+  const addItem = () => {
+    item.push(inputValue);
+    let itemsToAdd = item.map((x,i) => <li key={i}>{x}</li>);
+    setListItemsHTML(itemsToAdd);
+  }
+  
+
   
   return (
     <div className="globalContainer">
       <h1>To do</h1>
       <div className = "paperContainer">
-        <input id="inputToDo" placeholder="What needs to be done?"/>
+        <input id="inputToDo" type="text" onChange={e => setInputValue(e.target.value)} onKeyPress = {e => {if(e.key === "Enter"){addItem()}}}   value={inputValue} placeholder="What needs to be done?"/>
         <div id="paper-1"><ul>{listItemsHTML}</ul></div>
         <div id="paper-2"></div>
         <div id="paper-3"></div>
