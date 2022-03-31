@@ -2,7 +2,9 @@
   text-align: center;
 }
 
-
+.title {
+  color: rgb(163, 69, 163);
+}
 
 #paper-1 {
   width: 100%;
@@ -12,6 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+ 
 }
 
 #paper-2 {
@@ -19,6 +22,7 @@
   height: 1vh;
   border: gray solid 1px;
   border-top: 0;
+  
 }
 
 #paper-3 {
@@ -26,6 +30,7 @@
   height: 1vh;
   border: gray solid 1px;
   border-top: 0;
+  
   
 }
 
@@ -45,6 +50,7 @@
   align-items: center;
   /* height: 100vmax; */
   width: 40%;
+  
 }
 
 .globalContainer {
@@ -57,9 +63,27 @@
 
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #itemsLeft {
   margin-left: 2%;
   color: gray;
 }
+
+ul {
+  list-style-type:none;
+}
+
+.ListItemContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteButton {
+  color: red;
+  margin-right: 7%;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
